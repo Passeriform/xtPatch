@@ -1,0 +1,12 @@
+☐ Add support for git diff
+☐ Support sequential, parallel, permute and combine
+☐ Add support for injectable labels in code
+  ☐ Use regex per language for detecting comments
+  ☐ JS/C/C++
+    ☐ // <Inject: InjectionMarker => Adds new functonality>
+    ☐ /* <Inject: InjectionMarker => Adds new functonality> */
+  ☐ Python
+    ☐ # <Inject: InjectionMarker => Adds new functonality>
+    ☐ """ <Inject: InjectionMarker => Adds new functonality> """
+
+☐ git diff --no-index ./examples/src/source.c ./examples/src/dest.c > ./examples/patches/basic/functionality.patch

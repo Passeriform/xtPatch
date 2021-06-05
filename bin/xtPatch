@@ -20,7 +20,7 @@ end.parse!
 
 bed_config, patch_suites = XtPatch::Config::Parser.parse(@config_path)
 
-bed = XtPatch::PatchBed.new
+xt = XtPatch::Xt.new
 
-bed.prepare(bed_config, patch_suites)
-bed.start(patch_suites)
+xt.prepare(bed_config, patch_suites)
+xt.start(patch_suites)

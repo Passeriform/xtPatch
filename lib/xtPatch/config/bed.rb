@@ -8,6 +8,9 @@ module XtPatch
         },
       }
 
+      attr_accessor :src
+      attr_accessor :meta
+
       def initialize(bed_conf = @@default_config)
         @src = bed_conf["patches-src"]
         @meta = bed_conf["meta"] ||= @@default_config["meta"]

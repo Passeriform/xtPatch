@@ -1,0 +1,19 @@
+diff --git a/./examples/src/calculator.c b/./examples/src/calculator.c
+index 52f40e7..cebdc28 100755
+--- a/./examples/src/calculator.c
++++ b/./examples/src/calculator.c
+@@ -1,8 +1,11 @@
+ #include<cstdio.h>
+-// Headers
+
+-// Definitions
++float sum(float first, float second) {
++  return first + second;
++}
+
+ void main() {
+-  // Add main using patch
++  float a, b, s;
++  s = sum(a, b);
++  puts(s);
+ }

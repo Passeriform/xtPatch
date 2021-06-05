@@ -5,11 +5,11 @@
   author = "MyAuthor"
 
 [basic]
-  target = "src/basic.c"
-  patches = ["basic/headers.patch", "basic/def.patch", "basic/impl.patch"]
+  target = "src/calculator.c"
+  patches = ["calculator/sum.patch", "calculator/subtract.patch", "calculator/multiply.patch"]
 
 [basic.validator]
-  exec = "gcc basic.c -o basic.o"
+  exec = "gcc calculator.c -o calculator.o"
 
 [complex]
   target = "src/complex.c"

@@ -6,13 +6,7 @@ TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'xtPatch'
-```
-
-And then execute:
+Execute:
 
     $ bundle install
 
@@ -22,7 +16,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Library
+To use xtPatch as a library module, add this line to your application's Gemfile:
+
+```ruby
+gem 'xtPatch'
+```
+
+### Application
+To use as a CLI application, run install.rb:
+
+    $ xtPatch [FLAGS] [OPTIONS]
 
 ## Development
 

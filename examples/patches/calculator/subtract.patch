@@ -1,0 +1,20 @@
+diff --git a/./examples/src/calculator.c b/./examples/src/calculator.c
+index cebdc28..773ed49 100755
+--- a/./examples/src/calculator.c
++++ b/./examples/src/calculator.c
+@@ -4,8 +4,14 @@ float sum(float first, float second) {
+   return first + second;
+ }
+
++float subtract(float first, float second) {
++  return first - second;
++}
++
+ void main() {
+-  float a, b, s;
++  float a, b, s, sub;
+   s = sum(a, b);
++  sub = subtract(a, b);
+   puts(s);
++  puts(sub);
+ }

@@ -3,18 +3,15 @@ require "xtPatch/config"
 require "xtPatch/core"
 
 module XtPatch
-  def check_patch_files(patch_list_config)
-    patch_list_config.map do |patch|
-      patch.paths.each { |path| `git apply --check "#{path}!"` }
-    end
-  end
-
-  class PatchBed
+    class Xt
     # Create bed and prepare files for patching
-    def prepare(bed_config, patch_config)
-      @config = { "bed": config, "suites": patch_config }
-      Dir.chdir(bed_config.src) do
-        check_patch_files(patch_config.patches)
+    def prepare(bed_config, suites)
+      @config = { "bed": bed_config, "suites": suites }
+
+      Dir.chdir(File.expand_path(Dir.pwd, bed_config.src)) do
+        suites.map do |suite|
+          suite.check_patch_files()
+        end
       end
     end
 

@@ -1,0 +1,22 @@
+diff --git a/./examples/src/calculator.c b/./examples/src/calculator.c
+index 773ed49..5e8a67c 100755
+--- a/./examples/src/calculator.c
++++ b/./examples/src/calculator.c
+@@ -8,10 +8,16 @@ float subtract(float first, float second) {
+   return first - second;
+ }
+
++float multiply(float first, float second) {
++  return first * second;
++}
++
+ void main() {
+-  float a, b, s, sub;
++  float a, b, s, sub, mul;
+   s = sum(a, b);
+   sub = subtract(a, b);
++  mul = multiply(a, b);
+   puts(s);
+   puts(sub);
++  puts(mul);
+ }

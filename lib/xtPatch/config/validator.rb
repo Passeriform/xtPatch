@@ -1,6 +1,8 @@
 module XtPatch
   module Config
     class Validator
+      attr_accessor :exec
+
       @@default_validator = {
         "exec" => ":",
       }
