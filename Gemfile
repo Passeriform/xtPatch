@@ -5,3 +5,5 @@ gemspec
 
 gem "rake", "~> 12.0"
 gem "rspec", "~> 3.0"
+gem "toml-rb", "~> 0.3.12"
+gem "pry", "~> 0.10.4"

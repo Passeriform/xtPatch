@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+require "optparse"
+require "xtPatch"
+
+@config_path = ""
+@options = {}
+
+OptionParser.new do |opts|
+  opts.on("-v", "--verbose", "Show extra information") do
+    @options[:verbose] = false
+  end
+  opts.on("-s", "--silent", "Silence all output") do
+    @options[:silent] = false
+  end
+  opts.on("-c", "--config", "Use custom config") do
+    @config_path = "./examples/xtPatch.toml"
+  end
+end.parse!
+
+bed_config, patch_suites = XtPatch::Config::Parser.parse(@config_path)
+
+bed = XtPatch::PatchBed.new
+
+bed.prepare(bed_config, patch_suites)
+bed.start(patch_suites)

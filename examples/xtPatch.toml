@@ -1,0 +1,25 @@
+[xtBed]
+  patches-src = "./patches"
+
+[xtBed.meta]
+  author = "MyAuthor"
+
+[basic]
+  target = "src/basic.c"
+  patches = ["basic/headers.patch", "basic/def.patch", "basic/impl.patch"]
+
+[basic.validator]
+  exec = "gcc basic.c -o basic.o"
+
+[complex]
+  target = "src/complex.c"
+
+[[complex.patches]]
+  name = "prepare-patch"
+  paths = ["../ext-patch/prepare-complex"]
+
+[[complex.patches]]
+  name = "permute-options"
+  type = "parallel"
+  paths = ["complex/impl/opt1", "complex/impl/opt1"]
+  validator = "gcc basic.c -o basic.o"
